@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Miguel Camarena - CPSC 321 WebDev2</title>
+        <!--bootstrap 5.3.8 linked here-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script><!--custom css linked here-->
+        <!-- custom style sheet -->
+        <link href="./styles.css" rel="stylesheet"/>
+    </head>
+<body>
+
+
+    <!--this is where the form sits-->
+    <form class="row g-3 needs-validation" id="mainForm" novalidate style="width: 90%; margin: auto;">
+
+      <!-- names boxes -->
+      <div class="col-4">
+        <label for="validationCustom01" class="form-label">First name</label>
+        <input type="text" class="form-control" id="validationCustom01" value="" required pattern="^[A-Za-z]{3,10}$">
+        <div class="invalid-feedback">
+              Please enter a first name with 3-10 letters
+            </div>
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+      </div>
+
+      <div class="col-4">
+        <label for="validationCustom02" class="form-label">Last name</label>
+        <input type="text" class="form-control" id="validationCustom02" value="" required pattern="^[A-Za-z]{3,10}$">
+        <div class="valid-feedback">
+          Looks good!
+        </div>
+        <div class="invalid-feedback">
+              Please choose a last name with 3-10 letters
+            </div>
+      </div>
+
+      <!-- email box -->
+      <div class="col-4">
+        <label for="validationCustomEmail" class="form-label">Email</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomEmail" aria-describedby="inputGroupPrepend" required pattern="^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.com$">
+            <div class="invalid-feedback">
+              Please enter an email in the format _____@____.com
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+      </div>
+
+      <div class="row"></div>
+
+      <!-- Address Box -->
+      <div class="col-4">
+        <label for="validationCustomStreet" class="form-label">Street Address</label>
+          <div class="input-group has-validation">
+            <input type="text" class="form-control" id="validationCustomStreet" aria-describedby="inputGroupPrepend" required pattern="^[a-zA-Z0-9\s]{7,20}$">
+            <div class="invalid-feedback">
+              Please enter an street address 7-20 characters including only numbers and letters
+            </div>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+      </div>
+    
+      
+      <!-- city box -->
+      <div class="col-4">
+        <label for="validationCustom03" class="form-label">City</label>
+        <input type="text" class="form-control" id="validationCustom03" required pattern="^[A-Za-z]{5,15}$">
+        <div class="invalid-feedback">
+          Please provide a valid city 5-15 letters long
+        </div>
+        <div class="valid-feedback">
+              Looks good!
+        </div>
+      </div>
+      <!-- state box -->
+      <div class="col-2">
+        <label for="validationCustom04" class="form-label">State</label>
+        <input type="text" class="form-control" id="validationCustom04" required pattern="^[A-Z]{2}$">
+        <div class="invalid-feedback">
+          Please enter a state as 2 Capital letters
+        </div>
+        <div class="valid-feedback">
+              Looks good!
+        </div>
+      </div>
+      <div class="col-2">
+        <label for="validationCustom05" class="form-label">Zip</label>
+        <input type="text" class="form-control" id="validationCustom05" required pattern="^[0-9]{5}$">
+        <div class="invalid-feedback">
+          Please provide a valid 5 digit zip.
+        </div>
+        <div class="valid-feedback">
+              Looks good!
+            </div>
+      </div>
+      <!-- all of our dropdown boxes go here -->
+
+      <section>
+        <div class="gap-3 mb-4" >
+        
+        <label for="dropDownQ1">Q1</label>
+        <select class="form-select" id="dropDownQ1">
+          <option value=""></option>
+          <option value="">Option1</option>
+          <option value="">Option2</option>
+          <option value="">Option3</option>
+        </select>
+
+        </div>
+
+        <div class="gap-3 mb-4" >
+        
+        <label for="dropDownQ1">Q1</label>
+        <select class="form-select" id="dropDownQ1">
+          <option value=""></option>
+          <option value="">Option1</option>
+          <option value="">Option2</option>
+          <option value="">Option3</option>
+        </select>
+
+        </div>
+        <div class="gap-3 mb-4" >
+        
+        <label for="dropDownQ1">Q1</label>
+        <select class="form-select" id="dropDownQ1">
+          <option value=""></option>
+          <option value="">Option1</option>
+          <option value="">Option2</option>
+          <option value="">Option3</option>
+        </select>
+
+        </div>
+        <div class="gap-3 mb-4" >
+        
+        <label for="dropDownQ1">Q1</label>
+        <select class="form-select" id="dropDownQ1">
+          <option value=""></option>
+          <option value="">Option1</option>
+          <option value="">Option2</option>
+          <option value="">Option3</option>
+        </select>
+
+        </div>
+        <div class="gap-3 mb-4" >
+        
+        <label for="dropDownQ1">Q1</label>
+        <select class="form-select" id="dropDownQ1">
+          <option value=""></option>
+          <option value="">Option1</option>
+          <option value="">Option2</option>
+          <option value="">Option3</option>
+        </select>
+
+        </div>
+
+        
+
+      </section>
+
+
+       <!--submit and modal box buttons go here  -->
+      <div class="col-12">
+        <button class="btn btn-primary" type="submit">Submit form</button>
+        <button class="btn btn-primary" type="mistmatch">Mismatch form</button>
+      </div>  
+    </form>
+
+    
+</body>
+
+<!--always place scripts AFTER body tag-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+(function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+</script>
+<script>
+  $(document).ready(function(){
+    $("#leftEnable").change(function(){
+      //dynammically activates and disables elements based on whether the checkbox is enabled, makes sure that one checkbox is always checked
+      var checkedState = $("#leftEnable").is(':checked');
+      //if left side is checked enabled, left side dropdown gets enabled
+      $("#leftDropdownResult").prop('disabled', !checkedState);
+
+      $("#rightDropdownResult").val(""); //both sides cleared for assurance
+      $("#leftDropdownResult").val("");
+      //turns off opposite side
+      $("#rightDropdownResult").prop('disabled', checkedState);
+      $("#rightEnable").prop('checked', !checkedState);
+    })
+    $("#rightEnable").change(function(){ //inverse of the last handler
+      var checkedState = $("#rightEnable").is(':checked');
+      $("#rightDropdownResult").prop('disabled', !checkedState);
+      $("#rightDropdownResult").val("");
+      $("#leftDropdownResult").val("");
+      $("#leftDropdownResult").prop('disabled', checkedState);
+      $("#leftEnable").prop('checked', !checkedState);
+    })
+  })
+
+</script>
+
+</html>
