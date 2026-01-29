@@ -11,27 +11,34 @@
         <link href="./styles.css" rel="stylesheet"/>
     </head>
 <body>
+  <!-- main container I put everything in -->
+   <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
     <section class="row form-group col-12" style="width: 90%; margin: auto;">
+
+      <!-- left side of the page -->
       <div id="dropDownLeft" class="col-6">
         <h1>Entry Left</h1>
-        <label for="leftResult">Leftside</label>
-        <select class="form-select" id="rightDropdownResult">
+        <label for="leftDropdownResult">Leftside</label>
+        <!-- bootstrap dropdown class -->
+        <select class="form-select" id="leftDropdownResult">
           <option value="">None</option>
           <option value="">Option1</option>
           <option value="">Option2</option>
           <option value="">Option3</option>
         </select>
+        <!-- bootstrap checkbox is created here -->
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="leftEnable" checked>
-          <label class="form-check-label" for="">
+          <label class="form-check-label" for="leftEnable">
             Enable
           </label>
         </div>
       </div>
 
+      <!-- same as the left -->
       <div id="dropDownRight" class="col-6" >
         <h1>Entry Right</h1>
-        <label for="rightResult">Rightside</label>
+        <label for="rightDropdownResult">Rightside</label>
         <select class="form-select" id="rightDropdownResult" disabled>
           <option value="">None</option>
           <option value="">Option1</option>
@@ -41,7 +48,7 @@
 
         <div class="form-check">
           <input class="form-check-input" type="checkbox" value="" id="rightEnable">
-          <label class="form-check-label" for="">
+          <label class="form-check-label" for="rightEnable">
             Enable
           </label>
         </div>
@@ -50,30 +57,29 @@
 </body>
 
 <!--always place scripts AFTER body tag-->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
   $(document).ready(function(){
     $("#leftEnable").change(function(){
-      if ($("#leftEnable").prop("checked") ){
-        document.getElementById(rightDropdownResult).style.disable = true;
-        document.getElementById(rightEnable).checked = false;
-      } else {
+      //dynammically activates and disables elements based on whether the checkbox is enabled, makes sure that one checkbox is always checked
+      var checkedState = $("#leftEnable").is(':checked');
+      //if left side is checked enabled, left side dropdown gets enabled
+      $("#leftDropdownResult").prop('disabled', !checkedState);
 
-      }
-      
+      $("#rightDropdownResult").val(""); //both sides cleared for assurance
+      $("#leftDropdownResult").val("");
+      //turns off opposite side
+      $("#rightDropdownResult").prop('disabled', checkedState);
+      $("#rightEnable").prop('checked', !checkedState);
     })
-    $("#rightEnable").change(function(){
-      if ($("#rightEnable").prop("checked") ){
-        document.getElementById(leftDropdownResult).style.disable = true;
-        document.getElementById(leftEnable).checked = false;
-      } else {
-
-      }
+    $("#rightEnable").change(function(){ //inverse of the last handler
+      var checkedState = $("#rightEnable").is(':checked');
+      $("#rightDropdownResult").prop('disabled', !checkedState);
+      $("#rightDropdownResult").val("");
+      $("#leftDropdownResult").val("");
+      $("#leftDropdownResult").prop('disabled', checkedState);
+      $("#leftEnable").prop('checked', !checkedState);
     })
-
-
-
-
-
   })
 
 </script>
