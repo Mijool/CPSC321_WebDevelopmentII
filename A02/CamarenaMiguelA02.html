@@ -203,21 +203,277 @@
               Looks good!
         </div>
         </div>
-
-
-        
-
       </section>
+
+
 
 
        <!--submit and modal box buttons go here  -->
       <div class="col-12">
         <button class="btn btn-primary" type="submit">Submit form</button>
-        <button class="btn btn-primary" type="mistmatch">Mismatch form</button>
+        <button class="btn btn-secondary" type="button" data-bs-toggle="modal" data-bs-target="#mismatchModal">Mismatch form</button>
       </div>  
     </form>
 
-    
+
+      <!-- modal box here, sits outside of form so its not affected by form's styling -->
+    <div class="modal fade" id="mismatchModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel"></h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <form id="modalForm" novalidate>
+          <div class="modal-body">
+
+
+
+
+          
+            <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
+            <section class="row form-group col-12" style="width: 90%; margin: auto;" id="modalInside">
+
+              <!-- left side of the page -->
+              <div id="dropDownLeft1" class="col-6">
+                <label for="leftDropdownResult1">Q1: What's your favorite color?</label>
+                <!-- bootstrap dropdown class -->
+                <select class="form-select" id="leftDropdownResult1">
+                  <option value=""></option>
+                  <option value="">Red</option>
+                  <option value="">Green</option>
+                  <option value="">Blue</option>
+                  <option value="">Other</option>
+                </select>
+                <!-- bootstrap checkbox is created here -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="leftEnable1" checked>
+                  <label class="form-check-label" for="leftEnable1">
+                    Enable
+                  </label>
+                </div>
+              </div>
+
+              <!-- same as the left -->
+              <div id="dropDownRight1" class="col-6" >
+              
+                <label for="rightDropdownResult1">Q1: What's your favorite color?</label>
+                <select class="form-select" id="rightDropdownResult1" disabled>
+                      <option value=""></option>
+                      <option value="">Red</option>
+                      <option value="">Green</option>
+                      <option value="">Blue</option>
+                      <option value="">Other</option>                
+                  </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rightEnable1">
+                  <label class="form-check-label" for="rightEnable1">
+                    Enable
+                  </label>
+                </div>
+              </div>
+            </section>
+
+
+                          <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
+            <section class="row form-group col-12" style="width: 90%; margin: auto;">
+
+              <!-- left side of the page -->
+              <div id="dropDownLeft2" class="col-6">
+
+                <label for="leftDropdownResult2">Q2: What's your favorite media?</label>
+                <!-- bootstrap dropdown class -->
+                <select class="form-select" id="leftDropdownResult2">
+                  <option value=""></option>
+                  <option value="">Movie</option>
+                  <option value="">Book</option>
+                  <option value="">Song</option>
+                  <option value="">TV Show</option>
+                  <option value="">Other</option>
+                </select>
+                <!-- bootstrap checkbox is created here -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="leftEnable2" checked>
+                  <label class="form-check-label" for="leftEnable2">
+                    Enable
+                  </label>
+                </div>
+              </div>
+
+              <!-- same as the left -->
+              <div id="dropDownRight2" class="col-6" >
+                
+                <label for="rightDropdownResult2">Q2: What's your favorite media?</label>
+                <select class="form-select" id="rightDropdownResult2" disabled>
+                  <option value=""></option>
+                  <option value="">Movie</option>
+                  <option value="">Book</option>
+                  <option value="">Song</option>
+                  <option value="">TV Show</option>
+                  <option value="">Other</option>
+                </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rightEnable2">
+                  <label class="form-check-label" for="rightEnable2">
+                    Enable
+                  </label>
+                </div>
+              </div>
+            </section>
+
+
+                          <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
+            <section class="row form-group col-12" style="width: 90%; margin: auto;">
+
+              <!-- left side of the page -->
+              <div id="dropDownLeft3" class="col-6">
+                
+                <label for="leftDropdownResult3">Q3: What's your favorite sport?</label>
+                <!-- bootstrap dropdown class -->
+                <select class="form-select" id="leftDropdownResult3">
+                  <option value=""></option>
+                  <option value="">Soccer</option>
+                  <option value="">Football</option>
+                  <option value="">Basketball</option>
+                  <option value="">Other</option>
+                </select>
+                <!-- bootstrap checkbox is created here -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="leftEnable3" checked>
+                  <label class="form-check-label" for="leftEnable3">
+                    Enable
+                  </label>
+                </div>
+              </div>
+
+              <!-- same as the left -->
+              <div id="dropDownRight3" class="col-6" >
+                
+                <label for="rightDropdownResult3">Q3: What's your favorite sport?</label>
+                <select class="form-select" id="rightDropdownResult3" disabled>
+                  <option value=""></option>
+                  <option value="">Soccer</option>
+                  <option value="">Football</option>
+                  <option value="">Basketball</option>
+                  <option value="">Other</option>
+                </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rightEnable3">
+                  <label class="form-check-label" for="rightEnable3">
+                    Enable
+                  </label>
+                </div>
+              </div>
+            </section>
+
+
+                          <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
+            <section class="row form-group col-12" style="width: 90%; margin: auto;">
+
+              <!-- left side of the page -->
+              <div id="dropDownLeft4" class="col-6">
+                
+                <label for="leftDropdownResult4">Q4: What's your favorite subject?</label>
+                <!-- bootstrap dropdown class -->
+                <select class="form-select" id="leftDropdownResult4">
+                  <option value=""></option>
+                  <option value="">Math</option>
+                  <option value="">Computer Science</option>
+                  <option value="">English</option>
+                  <option value="">Other</option>
+                </select>
+                <!-- bootstrap checkbox is created here -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="leftEnable4" checked>
+                  <label class="form-check-label" for="leftEnable4">
+                    Enable
+                  </label>
+                </div>
+              </div>
+
+              <!-- same as the left -->
+              <div id="dropDownRight4" class="col-6" >
+                
+                <label for="rightDropdownResult">Q4: What's your favorite subject?</label>
+                <select class="form-select" id="rightDropdownResult4" disabled>
+                  <option value=""></option>
+                  <option value="">Math</option>
+                  <option value="">Computer Science</option>
+                  <option value="">English</option>
+                  <option value="">Other</option>
+                </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rightEnable4">
+                  <label class="form-check-label" for="rightEnable4">
+                    Enable
+                  </label>
+                </div>
+              </div>
+            </section>
+
+
+            <!-- row prop to lay elements next to each other           makes everything centered and not stuck on the edges -->
+            <section class="row form-group col-12" style="width: 90%; margin: auto;">
+              <!-- left side of the page -->
+              <div id="dropDownLeft5" class="col-6">
+                
+                <label for="leftDropdownResult5">Q5: What's your favorite pizza topping?</label>
+                <!-- bootstrap dropdown class -->
+                <select class="form-select" id="leftDropdownResult5">
+                  <option value=""></option>
+                  <option value="">Pepperoni</option>
+                  <option value="">Cheese</option>
+                  <option value="">Sausage</option>
+                  <option value="">Other</option>
+                </select>
+                <!-- bootstrap checkbox is created here -->
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="leftEnable5" checked>
+                  <label class="form-check-label" for="leftEnable5">
+                    Enable
+                  </label>
+                </div>
+              </div>
+
+              <!-- same as the left -->
+              <div id="dropDownRight5" class="col-6" >
+                
+                <label for="rightDropdownResult5">Q5: What's your favorite pizza topping?</label>
+                <select class="form-select" id="rightDropdownResult5" disabled>
+                  <option value=""></option>
+                  <option value="">Pepperoni</option>
+                  <option value="">Cheese</option>
+                  <option value="">Sausage</option>
+                  <option value="">Other</option>
+                </select>
+
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="rightEnable5">
+                  <label class="form-check-label" for="rightEnable5">
+                    Enable
+                  </label>
+                </div>
+              </div>
+            </section>
+          </div>
+        
+
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Save changes</button>
+          </div>
+          
+        </form>
+
+      </div>
+    </div>
+  </div>
+
 </body>
 
 <!--always place scripts AFTER body tag-->
@@ -285,6 +541,40 @@ $(document).ready(function(){
 
 
 
+
+
+</script>
+<script>
+$(document).ready(function(){
+
+
+    $("#leftEnable1,#leftEnable2,#leftEnable3,#leftEnable4,#leftEnable5").change(function(){
+      //dynammically activates and disables elements based on whether the checkbox is enabled, makes sure that one checkbox is always checked
+      let idDigit = parseInt(this.id.slice(-1), 10);
+
+      var checkedState = $(this).is(':checked');
+      //if left side is checked enabled, left side dropdown gets enabled
+      $("#leftDropdownResult" + idDigit).prop('disabled', !checkedState);
+
+      $("#rightDropdownResult" + idDigit).val(""); //both sides cleared for assurance
+      $("#leftDropdownResult" + idDigit).val("");
+      //turns off opposite side
+      $("#rightDropdownResult" + idDigit).prop('disabled', checkedState);
+      $("#rightEnable"+idDigit).prop('checked', !checkedState);
+    })
+    $("#rightEnable1,#rightEnable2,#rightEnable3,#rightEnable4,#rightEnable5").change(function(){ //inverse of the last handler
+      let idDigit = parseInt(this.id.slice(-1), 10);
+
+      var checkedState = $(this).is(':checked');
+
+      $("#rightDropdownResult"+ idDigit).prop('disabled', !checkedState);
+      $("#rightDropdownResult"+ idDigit).val("");
+
+      $("#leftDropdownResult"+ idDigit).val("");
+      $("#leftDropdownResult"+ idDigit).prop('disabled', checkedState);
+      $("#leftEnable"+ idDigit).prop('checked', !checkedState);
+    })
+  })
 
 
 </script>
