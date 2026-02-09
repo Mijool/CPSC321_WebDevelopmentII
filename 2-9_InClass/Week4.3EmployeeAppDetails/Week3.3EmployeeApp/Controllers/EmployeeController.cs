@@ -47,7 +47,70 @@ namespace Week3._3EmployeeApp.Controllers
             //    }
             //}
             //return View();
-        } 
+        }
+
+        [HttpGet]
+
+        public IActionResult Edit()
+        {
+
+            return View();
+
+        }
+
+        [HttpPost]
+        public IActionResult Edit(int id, EmployeeModel newEmployee)
+        {
+
+
+            var employee = employees.FirstOrDefault(e => e.Id == id); //set first employee that has the Id equal to id coming in as an argument
+            
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                //instead of deleting and adding a new object, we just make the existing object's data to match the edited object
+                employee.Salary = newEmployee.Salary;
+                employee.FirstName = newEmployee.FirstName;
+                employee.LastName = newEmployee.LastName;
+                employee.Position = newEmployee.Position;
+
+            }
+           return RedirectToAction("ListOfEmployees");
+            
+
+        }
+
+        [HttpGet]
+
+        public IActionResult Delete()
+        {
+            //deleting doesn't need its own view, there is nothing to enter
+            return RedirectToAction("ListOfEmployees");
+
+        }
+
+        [HttpPost]
+        public IActionResult Delete(int id)
+        {
+
+            var employee = employees.FirstOrDefault(e => e.Id == id); //set first employee that has the Id equal to id coming in as an argument
+
+            if (employee == null)
+            {
+                return NotFound();
+            }
+
+            if (ModelState.IsValid)
+            {
+                employees.Remove(employee);               
+
+            }
+            return RedirectToAction("ListOfEmployees");
+        }
 
 
 
