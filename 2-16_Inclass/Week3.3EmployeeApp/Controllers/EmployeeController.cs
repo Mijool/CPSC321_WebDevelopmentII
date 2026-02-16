@@ -7,9 +7,21 @@ namespace Week3._3EmployeeApp.Controllers
     {
         public static List<EmployeeModel> employees = new List<EmployeeModel>(); //creating a list of employees using the EmployeeModel (inside I will have EmployeeModel objects)
 
+        
         //-------------------EXERCISE-------------------
         //Add a total budget for this web application of $1,000,000
         //Add a budget for each employee of $250,000
+
+        public static bool checkSalary(EmployeeModel currentEmployee, decimal salaryRunningTotal)
+        {
+            const decimal totalSalaryBudget = 1_000_000;
+            const decimal maxSalaryPerEmployee = 250_000;
+          // return false;
+
+            //decimal currentSalary = currentEmployee.Salary;
+            //if (salaryRunningTotal > totalSalaryBudget) ;
+            
+        }
 
         public IActionResult ListOfEmployees()
         { 
@@ -26,8 +38,14 @@ namespace Week3._3EmployeeApp.Controllers
         [HttpPost] //This action will be responsible for "POST"ting data to the server
         public IActionResult CreateEmployee(EmployeeModel employee) //This employee object is coming from my CreateEmployee View when I click submit
         {
+            if (checkSalary(employee))
+            {
+                return View("CreateEmployee", employee); //returning the CreateEmployee View, with the employee object that the user is working on/creating
+
+            }
             if (ModelState.IsValid) //Validating that I have a valid employee object
             {
+                
                 employees.Add(employee); //Adding the employee that I created in my CreateEmployee view to my employees list
                 return RedirectToAction("ListOfEmployees"); //Return the ListOfEmployees View [WITH THE CHANGES <-- redirectToAction]
             }
@@ -41,6 +59,7 @@ namespace Week3._3EmployeeApp.Controllers
             {
                 return NotFound();
             }
+   
             return View(employee);
 
             //*----Long way---*//
