@@ -1,0 +1,60 @@
+﻿@model IEnumerable<Week3._3EmployeeApp.Models.EmployeeModel> //the model for this view is a collection of EmployeeModel's
+
+@{
+    ViewData["Title"] = "ListOfEmployees";
+}
+
+<h1>ListOfEmployees</h1>
+
+<p>
+    <a asp-action="CreateEmployee">Create New</a> <!--asp-action looks for the action in the controller with the specified name (i.e. CreateEmployee)-->
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.FirstName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LastName)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Position)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Salary)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) { //Model with a capital M is referring to the employees list, item is referring to each employee
+        //adding a tr (table row) for each employee inside my employees list
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
+                @Html.ActionLink("Details", "Details", new {  id=item.Id }) |
+                    @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
