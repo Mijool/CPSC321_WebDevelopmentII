@@ -221,3 +221,16 @@ C:\Users\halzoubi\source\repos\Week3.3EmployeeApp\Week3.3EmployeeApp\obj\Debug\n
 C:\Users\halzoubi\source\repos\Week3.3EmployeeApp\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.pdb
 C:\Users\halzoubi\source\repos\Week3.3EmployeeApp\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.genruntimeconfig.cache
 C:\Users\halzoubi\source\repos\Week3.3EmployeeApp\Week3.3EmployeeApp\obj\Debug\net7.0\ref\Week3.3EmployeeApp.dll
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.csproj.AssemblyReference.cache
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\rpswa.dswa.cache.json
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.AssemblyInfoInputs.cache
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.AssemblyInfo.cs
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.csproj.CoreCompileInputs.cache
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.RazorAssemblyInfo.cache
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.RazorAssemblyInfo.cs
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.sourcelink.json
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.dll
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\refint\Week3.3EmployeeApp.dll
+C:\Users\Mimis\RiderProjects\CPSC321_WebDevelopmentII\2-16_Inclass\Week3.3EmployeeApp\obj\Debug\net7.0\Week3.3EmployeeApp.pdb
