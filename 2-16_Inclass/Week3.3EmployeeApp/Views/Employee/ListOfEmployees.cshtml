@@ -5,6 +5,7 @@
 }
 
 <h1>ListOfEmployees</h1>
+<p>Salary total: @ViewBag.TotalSalary</p>
 
 <p>
     <a asp-action="CreateEmployee">Create New</a> <!--asp-action looks for the action in the controller with the specified name (i.e. CreateEmployee)-->
@@ -54,7 +55,7 @@
             <td>
                 @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
                 @Html.ActionLink("Details", "Details", new {  id=item.Id }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @Html.ActionLink("Delete", "Delete", new { id=item.Id})
             </td>
         </tr>
 }
