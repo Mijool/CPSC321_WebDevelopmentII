@@ -1,0 +1,32 @@
+@media(max-width: 1000px){
+    #mediaquery {
+        display: none;
+    }
+}
+
+
+/* centers main input form */
+#mainForm{
+    margin: auto;
+    padding: 4%;
+}
+
+#chi_picture {
+    margin: auto;
+    text-align: center;
+}
+
+/* #chi_picture img{ 
+    /* margin: auto; 
+    /* display: block; 
+    /* width: 80%; 
+    
+} setting to col- makes this css obsolete */
+
+/* must override bootsrap class to display properly */
+.table{
+    margin: 40px auto;
+    width: 90%;
+}
+
+
