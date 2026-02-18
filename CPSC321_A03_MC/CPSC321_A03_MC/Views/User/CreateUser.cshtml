@@ -1,0 +1,139 @@
+@model CPSC321_A03_MC.Models.UserModel
+@using System.Text.RegularExpressions;
+@{
+    ViewData["Title"] = "CreateUser";
+}
+
+
+<h1>CreateUser</h1>
+
+<h4>UserModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateUser" class="needs-validation">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label"></label>
+                <input asp-for="FirstName" class="form-control" required pattern="^[A-Za-z]{3,10}$"/>
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+                <div class="invalid-feedback">
+                    Please enter a first name between 3-10 letters
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label"></label>
+                <input asp-for="LastName" class="form-control" required pattern="^[A-Za-z]{3,10}$"/>
+                <span asp-validation-for="LastName" class="text-danger"></span>
+                <div class="invalid-feedback">
+                    Please enter a last name between 3-10 letters
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <select asp-for="Department" class="form-select" id="DepartmentSelection" required>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="IT">IT</option>
+                    <option value="Business">Business</option>
+                </select>
+            </div>
+            <div class="form-group" id="ITPositions" disabled>
+                <label asp-for="Position" class="control-label"></label>
+                <select asp-for="Position" class="form-control">
+                    <option selected disabled value="">Choose...</option>
+                    <option>Software Engineer</option>
+                    <option>Data Scientist</option>
+                    <option>Data Analyst</option>
+                    <option>Security Engineer</option>
+                </select>
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="BusinessPositions" disabled>
+                <label asp-for="Position" class="control-label"></label>
+                <select asp-for="Position" class="form-control">
+                    <option selected disabled value="">Choose...</option>
+                    <option>Sales</option>
+                    <option>Accountant</option>
+                    <option>Business Analyst</option>
+                    <option>Project Manager</option>
+                </select>
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+            @*<div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Position" class="control-label"></label>
+                <input asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>*@
+            <div class="form-group">
+                <label asp-for="YearsOfExperience" class="control-label"></label>
+                <input asp-for="YearsOfExperience" class="form-control" required/>
+                <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
+                <div class="invalid-feedback">
+                    Please enter a Tenure between 0 and 30 years
+                </div>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" required/>
+                <span asp-validation-for="Salary" class="text-danger"></span>
+                <div class="invalid-feedback">
+                    Please enter a salary between $1 and $100,000
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+<!--always place scripts AFTER body tag-->
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    (() => {
+        'use strict'
+
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        const forms = document.querySelectorAll('.needs-validation')
+
+        // Loop over them and prevent submission
+        Array.from(forms).forEach(form => {
+            form.addEventListener('submit', event => {
+                if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                }
+
+                form.classList.add('was-validated')
+            }, false)
+        })
+    })()
+</script>
+
+<script>
+    $(document).ready(function () {
+        $("#DepartmentSelection").change(function () {
+            if ($(this).val() === 'Business') {
+                $("BusinessPositions").prop('disabled', false).val("");
+                $("ITPositions").prop('disabled', true).val("");
+                
+            } else if ($(this).val() === 'IT') {
+                $("ITPositions").prop('disabled', false).val("");
+                $("BusinessPositions").prop('disabled', true).val("");
+            }
+        })
+    })
+    
+</script>
+
+
