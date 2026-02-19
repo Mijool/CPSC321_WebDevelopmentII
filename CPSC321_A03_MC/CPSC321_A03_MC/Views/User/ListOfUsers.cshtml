@@ -3,9 +3,18 @@
 @{
     ViewData["Title"] = "ListOfUsers";
 }
+<style> 
+    .ribbon-icon {
+        height: 40px;
+        width: auto; 
+        display: block;
+    }
+</style>
 
 <h1>ListOfUsers</h1>
 <p>Total Salary: @ViewBag.TotalSalary</p>
+<p>IT Total: @ViewBag.ITTotal</p>
+<p>Business Total: @ViewBag.BusinessTotal</p>
 
 <p>
     <a asp-action="CreateUser">Create New</a>
@@ -61,6 +70,19 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.YearsOfExperience)
+            @*we can use an if block here to decide which png gets displayed depending on their tenure*@
+            @if (item.YearsOfExperience >= 5 && item.YearsOfExperience <= 9) 
+            {
+                <img src="~/images/bronzeribbon.png" alt="Bronze Ribbon" class="ribbon-icon" />
+            }
+            else if (item.YearsOfExperience >= 10 && item.YearsOfExperience <= 15)
+            {
+                <img src="~/images/silverribbon.png" alt="Silver Ribbon" class="ribbon-icon" />
+            }
+            else if (item.YearsOfExperience >= 16 && item.YearsOfExperience <= 20)
+            {
+                <img src="~/images/goldribbon.png" alt="Gold Ribbon" class="ribbon-icon" />
+            }
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.Salary)
@@ -74,3 +96,12 @@
 }
     </tbody>
 </table>
+
+@section Scripts {
+<script>
+
+
+
+
+</script>
+}
