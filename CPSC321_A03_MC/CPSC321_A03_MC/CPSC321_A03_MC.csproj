@@ -31,7 +31,8 @@
     </ItemGroup>
 
     <ItemGroup>
-      <Folder Include="Views\User\" />
+      <None Include="wwwroot\images\bronzeribbon.png" />
+      <None Include="wwwroot\images\silverribbon.png" />
     </ItemGroup>
 
 </Project>
