@@ -1,10 +1,9 @@
 {
   "ExpandedNodes": [
     "",
-    "\\2-16_Inclass",
-    "\\CPSC321_A03_MC",
-    "\\CPSC321_A03_MC\\CPSC321_A03_MC"
+    "\\CPSC321_A03_MC\\CPSC321_A03_MC",
+    "\\CPSC321_A03_MC\\CPSC321_A03_MC\\Controllers"
   ],
-  "SelectedNode": "\\CPSC321_A03_MC\\CPSC321_A03_MC.sln",
+  "SelectedNode": "\\.gitignore",
   "PreviewInSolutionExplorer": false
 }

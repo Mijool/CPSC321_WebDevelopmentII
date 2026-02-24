@@ -34,11 +34,11 @@ namespace Week3._3EmployeeApp.Controllers
 
         public IActionResult ListOfEmployees()
         {
-            salaryRunningTotal = 0;
+            /*salaryRunningTotal = 0;
             foreach (EmployeeModel e in employees) //our total gets calulated everytime the page reloads so it doesn't keep accumulating
             {
                 salaryRunningTotal += e.Salary;
-            }
+            }*/
 
             ViewBag.TotalSalary = salaryRunningTotal; //this object allows up to display the total in our razor view
             
@@ -63,6 +63,8 @@ namespace Week3._3EmployeeApp.Controllers
 
                 }
                 employees.Add(employee); //Adding the employee that I created in my CreateEmployee view to my employees list
+
+                salaryRunningTotal += employee.Salary;
                 return RedirectToAction("ListOfEmployees"); //Return the ListOfEmployees View [WITH THE CHANGES <-- redirectToAction]
             }
             return View("CreateEmployee", employee); //returning the CreateEmployee View, with the employee object that the user is working on/creating
@@ -113,7 +115,10 @@ namespace Week3._3EmployeeApp.Controllers
                     existingEmployee.LastName = editedEmployee.LastName;
                     existingEmployee.Position = editedEmployee.Position;
                     existingEmployee.Salary = editedEmployee.Salary;
-                    
+
+                    salaryRunningTotal -= existingEmployee.Salary;
+                    salaryRunningTotal += editedEmployee.Salary;
+
                 }
                 return RedirectToAction("ListOfEmployees"); //return to the list view with the updated information
             }
@@ -143,6 +148,7 @@ namespace Week3._3EmployeeApp.Controllers
                 return NotFound();
             }
             employees.Remove(existingEmployee);
+            salaryRunningTotal -= existingEmployee.Salary;
             return RedirectToAction("ListOfEmployees"); //return to the list view with the updated information
 
            
