@@ -1,8 +1,8 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
-using CPSC321_A03_MC.Models;
+using CPSC321_A04_MC.Models;
 
-namespace CPSC321_A03_MC.Controllers;
+namespace CPSC321_A04_MC.Controllers;
 
 public class HomeController : Controller
 {

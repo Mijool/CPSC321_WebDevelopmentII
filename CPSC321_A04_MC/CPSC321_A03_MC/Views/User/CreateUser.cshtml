@@ -1,4 +1,4 @@
-﻿@model CPSC321_A03_MC.Models.UserModel
+﻿@model CPSC321_A04_MC.Models.UserModel
 
 @{
     ViewData["Title"] = "CreateUser";
@@ -13,12 +13,12 @@
         <form asp-action="CreateUser">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
-                <label asp-for="FirstName" class="control-label"></label>
+                <label asp-for="FirstName" class="control-label">First Name</label>
                 <input asp-for="FirstName" class="form-control" />
                 <span asp-validation-for="FirstName" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="LastName" class="control-label"></label>
+                <label asp-for="LastName" class="control-label">Last Name</label>
                 <input asp-for="LastName" class="form-control" />
                 <span asp-validation-for="LastName" class="text-danger"></span>
             </div>
@@ -64,7 +64,7 @@
                 <span asp-validation-for="Position" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="YearsOfExperience" class="control-label"></label>
+                <label asp-for="YearsOfExperience" class="control-label">Tenure</label>
                 <input asp-for="YearsOfExperience" class="form-control" />
                 <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
             </div>
@@ -116,3 +116,5 @@
     })
 	</script>
 }
+
+</div>

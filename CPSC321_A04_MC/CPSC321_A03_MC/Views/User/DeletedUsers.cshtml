@@ -1,0 +1,79 @@
+﻿@model IEnumerable<CPSC321_A04_MC.Models.UserModel>
+
+@{
+    ViewData["Title"] = "DeletedUsers";
+}
+
+<h1>DeletedUsers</h1>
+
+@if (ViewBag.deletedUserCount < 1)
+{
+    <p>No users have been deleted</p>
+}
+<table class="table">
+    <thead>
+        <tr>
+	        <th>
+		        @Html.DisplayNameFor(model => model.ID)
+	        </th>
+	        <th>
+		        Name
+	        </th>
+	        <th>
+		        Surname
+	        </th>
+	        <th>
+		        @Html.DisplayNameFor(model => model.Department)
+	        </th>
+	        <th>
+		        @Html.DisplayNameFor(model => model.Position)
+	        </th>
+	        <th>
+		        Tenure (Yrs)
+	        </th>
+	        <th>
+		        @Html.DisplayNameFor(model => model.Salary)
+		        ($)
+	        </th>
+            <th>
+	            Comment
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.FirstName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastName)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Department)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Position)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.YearsOfExperience)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Salary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.DeletionComment)
+            </td>
+@*             <td> we cant edit a deleted employee, so we disable the buttons
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td> *@
+        </tr>
+}
+    </tbody>
+</table>
