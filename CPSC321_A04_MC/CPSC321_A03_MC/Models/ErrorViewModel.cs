@@ -1,4 +1,4 @@
-namespace CPSC321_A03_MC.Models;
+namespace CPSC321_A04_MC.Models;
 
 public class ErrorViewModel
 {

@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace CPSC321_A03_MC.Models;
+namespace CPSC321_A04_MC.Models;
 
 public class UserModel
 {
@@ -34,6 +34,9 @@ public class UserModel
 
     [RegularExpression(@"^\d{1,6}(\.\d{1,2})?$", ErrorMessage = "Please enter a number between 1 and 100,000")]
     public double Salary { get; set; }
+    
+    [RegularExpression(@"^[A-Za-z0-9 ]*$", ErrorMessage = "Enter a comment")]
+    public string? DeletionComment { get; set; } //allow comment to be nullable as it wont be given a value until after it gets deleted
 }
 /*
  Data annotation: these can be stacked

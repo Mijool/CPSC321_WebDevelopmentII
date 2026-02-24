@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
-using CPSC321_A03_MC.Models;
+using CPSC321_A04_MC.Models;
 
-namespace CPSC321_A03_MC.Data
+namespace CPSC321_A04_MC.Data
 {
     public class CPSC321_A03_MCContext : DbContext
     {
@@ -14,6 +14,6 @@ namespace CPSC321_A03_MC.Data
         {
         }
 
-        public DbSet<CPSC321_A03_MC.Models.UserModel> UserModel { get; set; } = default!;
+        public DbSet<UserModel> UserModel { get; set; } = default!;
     }
 }

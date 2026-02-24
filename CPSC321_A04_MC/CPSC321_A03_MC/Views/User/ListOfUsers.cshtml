@@ -1,4 +1,4 @@
-@model IEnumerable<CPSC321_A03_MC.Models.UserModel>
+@model IEnumerable<CPSC321_A04_MC.Models.UserModel>
 
 @{
     ViewData["Title"] = "ListOfUsers";
@@ -27,11 +27,9 @@
         </th>
         <th>
             Name
-            @*@Html.DisplayNameFor(model => model.FirstName)*@
         </th>
         <th>
             Surname
-            @*@Html.DisplayNameFor(model => model.LastName)*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Department)
@@ -41,7 +39,6 @@
         </th>
         <th>
             Tenure (Yrs)
-            @*@Html.DisplayNameFor(model => model.YearsOfExperience)*@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Salary)
@@ -88,9 +85,9 @@
             @Html.DisplayFor(modelItem => item.Salary)
         </td>
         <td>
-            @*<a asp-action="Edit" asp-route-id="@item.ID">Edit</a> |
-                <a asp-action="Details" asp-route-id="@item.ID">Details</a> |
-                <a asp-action="Delete" asp-route-id="@item.ID">Delete</a>*@
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
         </td>
     </tr>
 }
