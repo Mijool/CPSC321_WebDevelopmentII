@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj": {}
+    "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj": {}
   },
   "projects": {
-    "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj": {
+    "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
+        "projectUniqueName": "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
         "projectName": "Week3.3EmployeeApp",
-        "projectPath": "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
+        "projectPath": "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
         "packagesPath": "C:\\Users\\mcamarena\\.nuget\\packages\\",
-        "outputPath": "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\obj\\",
+        "outputPath": "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mcamarena\\AppData\\Roaming\\NuGet\\NuGet.Config",

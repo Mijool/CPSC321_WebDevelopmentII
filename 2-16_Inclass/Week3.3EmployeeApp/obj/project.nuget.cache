@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "VizJVwqed1o6k+8vfzNGZiiS1Cv1cf18xrEcBMg6Ytj5PTJ+G4jRZioGOTo3ozzzaaiX97BqiKEsOKqv1IIAXw==",
+  "dgSpecHash": "fWaHt/mZM+EAT6ho6G8OMFQwk5d51MOxQtb5bBe58/T4tt0OCyDTuVs4GJEWSWiRpBNlgvL9DIIzOsjd5OIK5g==",
   "success": true,
-  "projectFilePath": "N:\\git repos\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
+  "projectFilePath": "C:\\Users\\mcamarena\\source\\repos\\Mijool\\CPSC321_WebDevelopmentII\\2-16_Inclass\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\mcamarena\\.nuget\\packages\\humanizer\\2.14.1\\humanizer.2.14.1.nupkg.sha512",
     "C:\\Users\\mcamarena\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
