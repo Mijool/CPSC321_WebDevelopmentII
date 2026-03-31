@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("StudentAppMigration")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f168a7fe643339be702bf27f0b8933f64cfdf6b0")]
 [assembly: System.Reflection.AssemblyProductAttribute("StudentAppMigration")]
 [assembly: System.Reflection.AssemblyTitleAttribute("StudentAppMigration")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
