@@ -9659,19 +9659,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\mcamarena\\.nuget\\packages\\": {}
+    "C:\\Users\\Mimis\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\mcamarena\\Source\\Repos\\Mijool\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
+      "projectUniqueName": "C:\\Users\\Mimis\\Desktop\\git repos\\CPSC321_WebDevelopmentII\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
       "projectName": "Week3.3EmployeeApp",
-      "projectPath": "C:\\Users\\mcamarena\\Source\\Repos\\Mijool\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
-      "packagesPath": "C:\\Users\\mcamarena\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\mcamarena\\Source\\Repos\\Mijool\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\obj\\",
+      "projectPath": "C:\\Users\\Mimis\\Desktop\\git repos\\CPSC321_WebDevelopmentII\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\Week3.3EmployeeApp.csproj",
+      "packagesPath": "C:\\Users\\Mimis\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Mimis\\Desktop\\git repos\\CPSC321_WebDevelopmentII\\CPSC321_WebDevelopmentII\\2-9_InClass\\Week4.3EmployeeAppDetails\\Week3.3EmployeeApp\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\mcamarena\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Mimis\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -9691,7 +9696,13 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "10.0.200"
     },
     "frameworks": {
       "net7.0": {
@@ -9721,7 +9732,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.200-preview.0.26103.119\\RuntimeIdentifierGraph.json"
       }
     }
   }

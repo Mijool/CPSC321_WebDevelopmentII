@@ -1,0 +1,104 @@
+@model IEnumerable<CPSC321_A04_MC.Models.UserModel>
+
+@{
+    ViewData["Title"] = "ListOfUsers";
+}
+<style> 
+    .ribbon-icon {
+        height: 40px;
+        width: auto; 
+        display: block;
+    }
+</style>
+
+<h1>ListOfUsers</h1>
+<p>Total Salary: @ViewBag.TotalSalary</p>
+<p>IT Total: @ViewBag.ITTotal</p>
+<p>Business Total: @ViewBag.BusinessTotal</p>
+
+<p>
+    <a asp-action="CreateUser">Create New</a>
+</p>
+<table class="table">
+    <thead>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ID)
+        </th>
+        <th>
+            Name
+        </th>
+        <th>
+            Surname
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Department)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Position)
+        </th>
+        <th>
+            Tenure (Yrs)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Salary)
+             ($)
+        </th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.FirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Department)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Position)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.YearsOfExperience)
+            @*we can use an if block here to decide which png gets displayed depending on their tenure*@
+            @if (item.YearsOfExperience >= 5 && item.YearsOfExperience <= 9) 
+            {
+                <img src="~/images/bronzeribbon.png" alt="Bronze Ribbon" class="ribbon-icon" />
+            }
+            else if (item.YearsOfExperience >= 10 && item.YearsOfExperience <= 15)
+            {
+                <img src="~/images/silverribbon.png" alt="Silver Ribbon" class="ribbon-icon" />
+            }
+            else if (item.YearsOfExperience >= 16 && item.YearsOfExperience <= 20)
+            {
+                <img src="~/images/goldribbon.png" alt="Gold Ribbon" class="ribbon-icon" />
+            }
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Salary)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ID })
+        </td>
+    </tr>
+}
+    </tbody>
+</table>
+
+@section Scripts {
+<script>
+
+
+
+
+</script>
+}

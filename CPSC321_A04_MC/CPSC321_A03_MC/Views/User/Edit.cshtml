@@ -1,0 +1,19 @@
+﻿@model CPSC321_A04_MC.Models.UserModel
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<div class="row col-12">
+	<h1 class="row">What value would you like to edit?</h1>
+	<h2 class="col-6">
+		@Html.ActionLink("Employee Tenure", "EditTenure", new { id = Model.ID})
+	</h2>
+	<h2 class="col-6">
+		@Html.ActionLink("Employee Salary", "EditSalary", new { id = Model.ID})
+	</h2>
+
+</div>
+
+
+
+
