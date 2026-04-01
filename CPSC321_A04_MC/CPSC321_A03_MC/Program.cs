@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using CPSC321_A03_MC.Data;
+using CPSC321_A04_MC.Data;
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddDbContext<CPSC321_A03_MCContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("CPSC321_A03_MCContext") ?? throw new InvalidOperationException("Connection string 'CPSC321_A03_MCContext' not found.")));

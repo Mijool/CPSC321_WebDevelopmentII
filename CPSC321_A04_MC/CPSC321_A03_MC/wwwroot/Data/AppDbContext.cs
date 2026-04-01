@@ -1,7 +1,7 @@
 ﻿using System.Data.Entity;
-using CPSC321_A03_MC.Models;
+using CPSC321_A04_MC.Models;
 
-namespace CPSC321_A03_MC.wwwroot.Context;
+namespace CPSC321_A04_MC.wwwroot.Context;
 
 public class AppDbContext: DbContext
 {
