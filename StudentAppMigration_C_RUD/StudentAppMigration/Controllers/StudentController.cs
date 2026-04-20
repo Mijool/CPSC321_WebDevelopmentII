@@ -65,12 +65,15 @@ namespace StudentAppMigration.Controllers
                 existingStudent.FirstName = editedStudent.FirstName;
                 existingStudent.LastName = editedStudent.LastName;
                 existingStudent.Major = editedStudent.Major;
+                //make sure to save our changes to the database
+                await studentAppDbContext.SaveChangesAsync();
+            
+                return RedirectToAction("Index");
             }
 
-            //make sure to save our changes to the database
-            await studentAppDbContext.SaveChangesAsync();
+            return View(editedStudent);
+
             
-            return RedirectToAction("Index");
         }
         public async Task<IActionResult> Delete(int id)
         {
@@ -78,6 +81,7 @@ namespace StudentAppMigration.Controllers
             var student = await studentAppDbContext.Students.FirstOrDefaultAsync(x => x.Id == id);
             return View(student);
         }
+
         [HttpPost]
         public async Task<IActionResult> Delete(StudentModel editedStudent)
         {
