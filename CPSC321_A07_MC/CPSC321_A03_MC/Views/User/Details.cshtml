@@ -1,0 +1,84 @@
+﻿@model CPSC321_A07_MC.Models.UserModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>UserModel</h4>
+    <hr />
+    <dl class="row">
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.ID)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.ID)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Department)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Department)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Position)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Position)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.YearsOfExperience)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.YearsOfExperience)
+        </dd>
+        <dt class="col-sm-2">
+            @Html.DisplayNameFor(model => model.Salary)
+        </dt>
+        <dd class="col-sm-10">
+            @Html.DisplayFor(model => model.Salary)
+        </dd>
+        @if (Model.DeletionComment != null) //only if the user has been deleted should their comment be displayed
+        {
+            <dt class="col-sm-2">
+                @Html.DisplayNameFor(model => model.DeletionComment)
+            </dt>
+            <dd class="col-sm-10">
+                @Html.DisplayFor(model => model.DeletionComment)
+            </dd>
+        }
+
+    </dl>
+</div>
+<div>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
+
+    <div>
+        @if (Model?.Department == "Business") @* returns to a different list depending on who's being looked at*@
+        {
+            <a asp-action="ListOfBusiness">Back to List</a>
+        }
+        else if (Model?.Department == "IT")
+        {
+            <a asp-action="ListOfIT">Back to List</a>
+        }
+        else
+        {
+            <a asp-action="ListOfUsers">Back to List</a>
+        }
+    </div>
+</div>
