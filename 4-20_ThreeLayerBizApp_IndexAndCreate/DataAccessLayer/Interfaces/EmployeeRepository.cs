@@ -28,5 +28,7 @@ namespace DataAccessLayer.Interfaces
         {
             return await _context.Employees.ToListAsync();
         }
+
+        public async Task<IEnumerable<Employee>> EmployeeDetailsAsync(int? id) => (IEnumerable<Employee>) await _context.Employees.FirstOrDefaultAsync(emp => emp.Id == id);
     }
 }

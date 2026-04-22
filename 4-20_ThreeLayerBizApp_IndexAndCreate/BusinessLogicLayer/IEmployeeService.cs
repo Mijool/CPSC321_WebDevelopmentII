@@ -11,5 +11,6 @@ namespace BusinessLogicLayer
     {
         Task<IEnumerable<Employee>> GetEmployeesAsync();
         Task AddEmployeeAsync(Employee employee);
+        Task<IEnumerable<Employee>> EmployeeDetailsAsync(int? id);
     }
 }

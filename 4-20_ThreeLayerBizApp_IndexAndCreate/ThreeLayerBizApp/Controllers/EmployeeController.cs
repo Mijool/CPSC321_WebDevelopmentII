@@ -41,5 +41,12 @@ namespace ThreeLayerBizApp.Controllers
             }
             return View(employeeModel);
         }
+
+        public async Task<IActionResult> Details(int? id)
+        {
+            var emp = await employeeService.EmployeeDetailsAsync(id);
+
+            return (emp != null)? View(emp): NotFound();
+        }
     }
 }

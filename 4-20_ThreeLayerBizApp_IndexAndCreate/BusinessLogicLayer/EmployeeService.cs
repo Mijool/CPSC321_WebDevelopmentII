@@ -37,5 +37,11 @@ namespace BusinessLogicLayer
                 //
             }
         }
+
+        public async Task<IEnumerable<Employee>> EmployeeDetailsAsync(int? id)
+        {
+            return await _employeeRepository.EmployeeDetailsAsync(id);
+            
+        }
     }
 }

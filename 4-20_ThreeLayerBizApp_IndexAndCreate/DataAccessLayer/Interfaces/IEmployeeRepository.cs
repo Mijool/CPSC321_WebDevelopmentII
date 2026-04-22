@@ -16,5 +16,6 @@ namespace DataAccessLayer.Interfaces
         Task<IEnumerable<Employee>> GetEmployeesAsync(); //now this method, as well as any other method that is created here must be implemented in any class(s) that implement the interface
         Task AddEmployeeAsync(Employee employee);
 
+        Task<IEnumerable<Employee>> EmployeeDetailsAsync(int? id);
     }
 }
