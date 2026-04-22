@@ -1,0 +1,120 @@
+﻿@model CPSC321_A07_MC.Models.UserModel
+
+@{
+    ViewData["Title"] = "CreateUser";
+}
+
+<h1>CreateUser</h1>
+
+<h4>UserModel</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateUser">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="FirstName" class="control-label">First Name</label>
+                <input asp-for="FirstName" class="form-control" />
+                <span asp-validation-for="FirstName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LastName" class="control-label">Last Name</label>
+                <input asp-for="LastName" class="form-control" />
+                <span asp-validation-for="LastName" class="text-danger"></span>
+            </div>
+@*             <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <input asp-for="Department" class="form-control" />
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Position" class="control-label"></label>
+                <input asp-for="Position" class="form-control" />
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div> *@
+            <div class="form-group">
+                <label asp-for="Department" class="control-label"></label>
+                <select asp-for="Department" class="form-select" id="DepartmentSelection">
+                    <option selected value="">Choose...</option>
+                    <option value="IT">IT</option>
+                    <option value="Business">Business</option>
+                </select>
+                <span asp-validation-for="Department" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="ITPositions" style="display:none;">
+                <label asp-for="Position" class="control-label"></label>
+                <select asp-for="Position" class="form-control" id="ITSelect" disabled>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="Software Engineer">Software Engineer</option>
+                    <option value="Data Scientist">Data Scientist</option>
+                    <option value="Data Analyst">Data Analyst</option>
+                    <option value="Security Engineer">Security Engineer</option>
+                </select>
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+            <div class="form-group" id="BusinessPositions" style="display:none;">
+                <label asp-for="Position" class="control-label"></label>
+                <select asp-for="Position" class="form-control" id="BusinessSelect" disabled>
+                    <option selected disabled value="">Choose...</option>
+                    <option value="Sales">Sales</option>
+                    <option value="Accountant">Accountant</option>
+                    <option value="Business Analyst">Business Analyst</option>
+                    <option value="Project Manager">Project Manager</option>
+                </select>
+                <span asp-validation-for="Position" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="YearsOfExperience" class="control-label">Tenure</label>
+                <input asp-for="YearsOfExperience" class="form-control" />
+                <span asp-validation-for="YearsOfExperience" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Salary" class="control-label"></label>
+                <input asp-for="Salary" class="form-control" />
+                <span asp-validation-for="Salary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    @* we get the value of the 1st dropdown menu and store it, depending on its value, it displays one drop down or the other one and clears both vlaues when changed*@
+</div>
+
+<div>
+    <a asp-action="ListOfUsers">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    <script>
+        
+    $(document).ready(function () { 
+        $('#DepartmentSelection').change(function () {
+            var selectedValue = $(this).val();
+            /*     we get the value of the 1st dropdown menu and store it, depending on its value,
+            it displays one drop down or the other one and clears both vlaues when changed
+            */
+             if (selectedValue === 'Business') {
+                $('#BusinessPositions').show();
+                $('#BusinessSelect').prop('disabled', false).val('');
+
+                $('#ITPositions').hide()
+                $('#ITSelect').prop('disabled', true).val('');
+                
+            } else if (selectedValue === 'IT') {
+                $('#ITPositions').show();
+                $('#ITSelect').prop('disabled', false).val('');
+
+                $('#BusinessPositions').hide()
+                $('#BusinessSelect').prop('disabled', true).val('');
+
+            } else {
+                
+                $('#ITSelect, #BusinessSelect').prop('disabled', true).val('');
+            }
+        })
+    })
+	</script>
+}
+
+</div>
